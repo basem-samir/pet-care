@@ -1,0 +1,1261 @@
+/* strat variables */
+:root {
+  --main-color: #65c178;
+  --seconrdy-color: #ed6436;
+  --third-color: #777777;
+  --black-color: #181818;
+  --section-backgrpund: #f2f2f4;
+  --section-padding: 50px;
+  --main-transition: 0.5s;
+}
+/* end variables */
+/* start component */
+.button-componentr {
+  background: var(--seconrdy-color);
+  border: var(--seconrdy-color);
+  color: white;
+}
+.button-componentr:hover {
+  background-color: #e84a15;
+  border: #e84a15;
+}
+.button-componentg {
+  background: var(--main-color);
+  border: var(--main-color);
+}
+.button-componentg:hover {
+  background-color: #4ab660;
+  border: #4ab660;
+  color: white;
+}
+.special-p {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 30px;
+}
+.special-h {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.special-h span {
+  color: var(--seconrdy-color);
+}
+.lasth {
+  font-size: 35px;
+}
+/* end component */
+/* start global rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* small  */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* mediam  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+/* end global rules */
+/* start help */
+div.help {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 50px;
+  background: var(--main-color);
+}
+@media (max-width: 767px) {
+  div.help {
+    justify-content: center;
+  }
+}
+div.help a {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+}
+div.help a:hover {
+  text-decoration: underline;
+}
+div.help a:nth-child(2) {
+  border: 1.5px solid;
+  border-color: transparent white;
+}
+/* end help */
+/* start header */
+header {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+  }
+}
+header h1 {
+  font-size: 40px;
+  font-weight: 800;
+  padding: 0 25px;
+}
+@media (max-width: 767px) {
+  header h1 {
+    margin: 0 0 15px 0;
+  }
+}
+header h1 span {
+  color: var(--seconrdy-color);
+}
+header div.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 500px;
+}
+@media (max-width: 767px) {
+  header div.info {
+    flex-basis: 0;
+    width: 100%;
+  }
+}
+header div.info div {
+  width: calc(100% / 3);
+  text-align: center;
+}
+header div.info div:nth-child(2) {
+  border: 1.5px solid;
+  border-color: transparent #dee2e6;
+}
+@media (max-width: 767px) {
+  header div.info div:nth-child(2) {
+    min-width: 160px;
+  }
+}
+header div.info div h3 {
+  font-size: 16px;
+}
+header div.info div p {
+  padding-top: 20px;
+  color: var(--third-color);
+}
+@media (max-width: 767px) {
+  header div.info div h3,
+  header div.info div p {
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+/* end header */
+/* start navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--black-color);
+}
+@media (max-width: 767px) {
+  nav {
+    height: calc(100vh - 198.5px);
+  }
+}
+nav div.links {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  nav div.links {
+    width: 100%;
+    text-align: center;
+  }
+}
+nav div.links ul {
+  display: flex;
+  list-style: none;
+  margin-left: 40px;
+}
+@media (max-width: 767px) {
+  nav div.links ul {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+nav div.links ul li {
+  padding: 30px 0 30px 0;
+  transition: var(--main-transition, 0.5s);
+  -webkit-transition: var(--main-transition, 0.5s);
+  -moz-transition: var(--main-transition, 0.5s);
+  -ms-transition: var(--main-transition, 0.5s);
+  -o-transition: var(--main-transition, 0.5s);
+}
+nav div.links ul li.active,
+nav div.links ul li:hover {
+  background-color: var(--seconrdy-color);
+}
+@media (max-width: 767px) {
+  nav div.links ul li.active,
+  nav div.links ul li:hover {
+    background-color: transparent;
+    border-bottom: 2px solid var(--seconrdy-color);
+  }
+}
+nav div.links ul li a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+nav button {
+  background-color: var(--seconrdy-color);
+  color: white;
+  border: 1px solid var(--seconrdy-color);
+  margin: 0 35px;
+  padding: 15px;
+  font-size: 20px;
+  text-transform: capitalize;
+  border-radius: 10px;
+  transition: var(--main-transition, 0.5s);
+  -webkit-transition: var(--main-transition, 0.5s);
+  -moz-transition: var(--main-transition, 0.5s);
+  -ms-transition: var(--main-transition, 0.5s);
+  -o-transition: var(--main-transition, 0.5s);
+}
+@media (max-width: 767px) {
+  nav button {
+    display: none;
+  }
+}
+nav button:hover {
+  background-color: #e84a15;
+  border: #e84a15;
+}
+/* end navigation */
+/* start landing */
+div.landing {
+  background-image: url("../img/carousel-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: calc(100vh - 83px);
+  position: relative;
+}
+@media (max-width: 767px) {
+  div.landing {
+    background-size: 100vh;
+    height: 437px;
+  }
+}
+div.landing div.layout {
+  width: 100%;
+  height: 100%;
+  background: #0000004a;
+}
+div.landing div.info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  line-height: 1.8;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  div.landing div.info {
+    top: 40%;
+  }
+}
+div.landing div.info p {
+  font-size: 30px;
+}
+@media (max-width: 767px) {
+  div.landing div.info p {
+    font-size: 20px;
+  }
+}
+div.landing div.info h2 {
+  font-size: 60px;
+  font-weight: 800;
+}
+@media (max-width: 767px) {
+  div.landing div.info h2 {
+    font-size: 35px;
+  }
+}
+div.landing div.buttons {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
+@media (max-width: 767px) {
+  div.landing div.buttons {
+    top: 85%;
+    width: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+div.landing div.buttons button {
+  padding: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 10px;
+  font-size: 25px;
+  transition: var(--main-transition, 0.5s);
+  -webkit-transition: var(--main-transition, 0.5s);
+  -moz-transition: var(--main-transition, 0.5s);
+  -ms-transition: var(--main-transition, 0.5s);
+  -o-transition: var(--main-transition, 0.5s);
+}
+div.landing div.buttons button.button-component {
+  background: var(--seconrdy-color);
+  border: var(--seconrdy-color);
+  color: white;
+}
+div.landing div.buttons button.button-component:hover {
+  background-color: #e84a15;
+  border: #e84a15;
+}
+div.landing div.buttons button:last-child {
+  background: var(--main-color);
+  border: var(--main-color);
+}
+div.landing div.buttons button:last-child:hover {
+  background-color: #4ab660;
+  border: #4ab660;
+  color: white;
+}
+/* end landing */
+/* start booking */
+div.booking {
+  background-color: var(--section-backgrpund);
+  padding-bottom: var(--section-padding);
+}
+div.booking div.container {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 25px;
+}
+@media (max-width: 1199px) {
+  div.booking div.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+div.booking div.container div.form {
+  height: 100%;
+  background-color: var(--seconrdy-color);
+}
+div.booking div.container div.form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+div.booking div.container div.form form input,
+div.booking div.container div.form form select {
+  width: 80%;
+  padding: 15px;
+  border-radius: 8px;
+  border: var(--seconrdy-color);
+  margin: 20px 0;
+}
+div.booking div.container div.form form input:focus,
+div.booking div.container div.form form select:focus {
+  outline: none;
+}
+div.booking div.container div.form form input:last-child {
+  background: var(--black-color);
+  color: white;
+}
+div.booking div.container div.book-service {
+  display: grid;
+  grid-template-rows: 300px 400px;
+  gap: 20px;
+}
+div.booking div.container div.book-service div.info {
+  padding: 10px;
+  line-height: 1.8;
+}
+div.booking div.container div.book-service div.info p:last-child {
+  font-size: 25px;
+  color: var(--third-color);
+}
+@media (max-width: 767px) {
+  div.booking div.container div.book-service div.info p {
+    font-size: 20px !important;
+  }
+  div.booking div.container div.book-service div.info h2 {
+    font-size: 30px !important;
+  }
+}
+div.booking div.container div.book-service div.service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+div.booking div.container div.book-service div.service div.serv {
+  width: 50%;
+  transition: 0.3s;
+}
+div.booking div.container div.book-service div.service div.serv:hover {
+  transition: 0.3s;
+  transform: scale(0.9);
+  /* box-shadow: 0 0 22px 4px var(--black-color); */
+  border-radius: 20px;
+}
+div.booking div.container div.book-service div.service div.serv div.icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  div.booking div.container div.book-service div.service div.serv div.icon {
+    flex-wrap: nowrap;
+  }
+}
+.flaticon-house:before {
+  content: "\f100";
+  font-size: 50px;
+  color: var(--main-color);
+  font-weight: 500;
+}
+.flaticon-food:before {
+  content: "\f102";
+  font-size: 50px;
+  color: var(--main-color);
+  font-weight: 500;
+}
+.flaticon-grooming:before {
+  content: "\f101";
+  font-size: 50px;
+  color: var(--main-color);
+  font-weight: 500;
+}
+.flaticon-toy:before {
+  content: "\f109";
+  font-size: 50px;
+  color: var(--main-color);
+  font-weight: 500;
+}
+div.booking div.container div.book-service div.service div.serv div.icon h1 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+div.booking div.container div.book-service div.service div.serv div.icon h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  div.booking div.container div.book-service div.service div.serv div.icon h3 {
+    font-size: 20px;
+  }
+}
+div.booking div.container div.book-service div.service div.serv p {
+  font-size: 18px;
+  color: var(--third-color);
+  margin-left: 41px;
+}
+@media (max-width: 767px) {
+  div.booking div.container div.book-service div.service div.serv p {
+    font-size: 16px;
+  }
+}
+/* end booking */
+/* start about */
+div.about {
+  padding-bottom: var(--section-padding);
+}
+div.about div.container {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  align-items: center;
+  margin-top: 40px;
+  gap: 160px;
+}
+@media (max-width: 991px) {
+  div.about div.container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+div.about div.container div.info {
+  line-height: 1.3;
+}
+@media (max-width: 767px) {
+  div.about div.container div.info {
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  div.about div.container div.info h2 {
+    font-size: 35px;
+    margin-top: 20px;
+  }
+}
+div.about div.container div.info h2 span:last-child {
+  color: var(--main-color);
+}
+div.about div.container div.info h3 {
+  font-size: 22px;
+  color: #6c757d;
+  margin: 20px 0;
+}
+@media (max-width: 767px) {
+  div.about div.container div.info h3 {
+    font-size: 18px;
+  }
+}
+div.about div.container div.info p:last-of-type {
+  color: var(--third-color);
+  font-size: 18px;
+  margin: 20px 0;
+}
+@media (max-width: 767px) {
+  div.about div.container div.info p:last-of-type {
+    font-size: 16px;
+  }
+}
+.fa-check-double:before {
+  content: "\f560";
+  padding-left: 15px;
+  color: var(--main-color);
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0 20px 0 0;
+}
+i.fa.fa-check-double {
+  display: block;
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+div.about div.container div.info button {
+  padding: 15px;
+  width: 200px;
+  border-radius: 6px;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 10px 0;
+  transition: var(--main-transition, 0.5s);
+  -webkit-transition: var(--main-transition, 0.5s);
+  -moz-transition: var(--main-transition, 0.5s);
+  -ms-transition: var(--main-transition, 0.5s);
+  -o-transition: var(--main-transition, 0.5s);
+}
+div.about div.container div.img {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  div.about div.container div.img {
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  div.about div.container div.img {
+    flex-direction: column;
+    width: 80%;
+    margin-top: -100px;
+  }
+}
+div.about div.container div.img img:first-child {
+  max-width: 100%;
+}
+
+div.about div.container div.img div.photos {
+  display: flex;
+}
+div.about div.container div.img div.photos img {
+  max-width: 50%;
+}
+/* end about */
+/* start services */
+div.services {
+  margin: 30px 0;
+  background-color: var(--section-backgrpund);
+  min-height: 1320px;
+  padding-bottom: var(--section-padding);
+}
+@media (max-width: 1199px) {
+  div.services {
+    min-height: 1800px;
+  }
+}
+@media (max-width: 767px) {
+  div.services {
+    min-height: 3300px;
+  }
+}
+div.services div.container {
+  padding-top: 100px;
+}
+div.services div.container div.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2;
+}
+div.services div.container div.servs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+}
+@media (max-width: 767px) {
+  div.services div.container div.servs {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+div.services div.container div.servs div.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px;
+  background: white;
+  transition: 0.3s;
+}
+div.services div.container div.servs div.card:hover {
+  transform: scale(1.1);
+  /* box-shadow: 7px 7px 9px 2px var(--seconrdy-color); */
+}
+.flaticon-cat:before {
+  content: "\f106";
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.flaticon-dog:before {
+  content: "\f107";
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.flaticon-dog:before {
+  content: "\f107";
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.flaticon-vaccine:before {
+  content: "\f104";
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+div.services div.container div.servs div.card h3 {
+  margin: 20px 0;
+  font-size: 30px;
+}
+div.services div.container div.servs div.card p {
+  color: var(--third-color);
+  font-size: 20px;
+  text-align: center;
+  max-width: 80%;
+  margin-bottom: 30px;
+}
+div.services div.container div.servs div.card a {
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--seconrdy-color);
+  font-weight: 700;
+}
+div.services div.container div.servs div.card a:hover {
+  color: #c53f12;
+  text-decoration: underline;
+}
+/* end services */
+/* start features */
+div.feature div.container {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 100px;
+}
+@media (max-width: 991px) {
+  div.feature div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+div.feature div.container img {
+  max-width: 100%;
+}
+@media (max-width: 991px) {
+  div.feature div.container img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+div.feature div.container div.info p:last-child {
+  font-size: 22px;
+  color: var(--third-color);
+  margin-bottom: 20px;
+}
+div.feature div.container div.feats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+}
+@media (max-width: 991px) {
+  div.feature div.container div.feats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+}
+div.feature div.container div.feats div.feat {
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+div.feature div.container div.feats div.feat:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0 0 15px 2px var(--main-color); */
+  border-radius: 15px;
+}
+div.feature div.container div.feats div.feat p {
+  font-size: 23px;
+  margin-left: 10px;
+  font-weight: 700;
+}
+.flaticon-doctor:before {
+  content: "\f105";
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.flaticon-care:before {
+  content: "\f103";
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+/* end features */
+/* start plan  */
+div.plan {
+  background: var(--section-backgrpund);
+  margin-top: 50px;
+  padding-top: 50px;
+  min-height: 900px;
+  padding-bottom: var(--section-padding);
+}
+div.plan div.container div.plans-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+div.plan div.container div.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+}
+div.plan div.container div.cards div.card {
+  min-height: 500px;
+  background: white;
+  transition: 0.3s;
+}
+div.plan div.container div.cards div.card:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0 0 15px 3px var(--seconrdy-color); */
+}
+div.plan div.container div.cards div.card:nth-child(2):hover {
+  /* box-shadow: 0 0 10px 2px var(--main-color); */
+}
+div.plan div.container div.cards div.card:hover img {
+  filter: brightness(0.5);
+}
+@media (max-width: 1199px) {
+  div.plan div.container div.cards div.card {
+    margin: 0 auto;
+  }
+}
+div.plan div.container div.cards div.card div.box {
+  position: relative;
+}
+div.plan div.container div.cards div.card div.box img {
+  max-width: 100%;
+}
+div.plan div.container div.cards div.card div.box div.layout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #0000007a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+div.plan div.container div.cards div.card div.box div.layout h3 {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--seconrdy-color);
+  margin-bottom: 60px;
+}
+div.plan div.container div.cards div.card div.box div.layout p {
+  font-size: 55px;
+  font-weight: 800;
+  color: white;
+  position: relative;
+}
+div.plan div.container div.cards div.card div.box div.layout p span {
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+}
+div.plan
+  div.container
+  div.cards
+  div.card
+  div.box
+  div.layout
+  p
+  span:first-child {
+  top: 0;
+  left: -15px;
+}
+div.plan div.container div.cards div.card div.box div.layout p span:last-child {
+  top: 35px;
+}
+div.plan div.container div.cards div.card div.text {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.plan div.container div.cards div.card div.text i.fa-check,
+div.plan div.container div.cards div.card div.text i.fa-times {
+  font-size: 25px;
+  margin: 10px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+div.plan div.container div.cards div.card div.text i:not(:last-of-type) {
+  border-bottom: 5px solid var(--section-backgrpund);
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.fa-check:before {
+  content: "\f00c";
+  padding: 5px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+.fa-times:before {
+  content: "\f00d";
+  padding: 5px;
+  font-weight: 700;
+  color: #dc3545;
+}
+div.plan div.container div.cards div.card div.text button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* end plan  */
+/* start crew */
+div.crew {
+  padding-bottom: var(--section-padding);
+}
+div.crew div.container div.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+div.crew div.container div.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+div.crew div.container div.images div.img {
+  transition: var(--main-transition, 0.5s);
+  -webkit-transition: var(--main-transition, 0.5s);
+  -moz-transition: var(--main-transition, 0.5s);
+  -ms-transition: var(--main-transition, 0.5s);
+  -o-transition: var(--main-transition, 0.5s);
+}
+
+@media (max-width: 991px) {
+  div.crew div.container div.images div.img {
+    max-width: 300px;
+    margin: 0 auto;
+    transition: 0.3s;
+  }
+}
+div.crew div.container div.images div.img img {
+  max-width: 100%;
+}
+div.crew div.container div.images div.img div.leader {
+  overflow: hidden;
+}
+div.crew div.container div.images div.img:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0 0 10px 5px var(--third-color); */
+}
+div.crew div.container div.images div.img div.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--section-backgrpund);
+  padding: 10px;
+  margin-top: -4px;
+  line-height: 2;
+}
+div.crew div.container div.images div.img div.info h3 {
+  font-size: 20px;
+  font-weight: 550;
+}
+div.crew div.container div.images div.img div.info p {
+  color: var(--third-color);
+  font-size: 18px;
+  text-transform: capitalize;
+}
+/* end crew */
+/* start client */
+div.client {
+  background-color: var(--section-backgrpund);
+  padding-bottom: var(--section-padding);
+}
+div.client div.container div.client-info {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.client div.container div.clients {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+div.client div.container div.clients div.cli {
+  background: white;
+  transition: 0.3s;
+}
+div.client div.container div.clients div.cli:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0 0 10px 5px var(--third-color); */
+  border-radius: 10px;
+}
+div.client div.container div.clients div.cli:hover img {
+  opacity: 0.5;
+  border-radius: 10px;
+}
+div.client div.container div.clients div.cli div.info {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+div.client div.container div.clients div.cli div.info div.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2;
+}
+div.client div.container div.clients div.cli div.info div.text h5 {
+  font-size: 20px;
+}
+div.client div.container div.clients div.cli div.info div.text span,
+div.client div.container div.clients div.cli p:last-child {
+  color: var(--third-color);
+}
+div.client div.container div.clients div.cli p:last-child {
+  text-align: center;
+  padding-bottom: 25px;
+}
+/* end client */
+/* start blog */
+div.blog {
+  padding-bottom: var(--section-padding);
+}
+div.blog div.container div.blog-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+div.blog div.container div.blogs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+div.blog div.container div.blogs div.blo {
+  background: var(--section-backgrpund);
+  min-height: 400px;
+  transition: 0.3s;
+}
+div.blog div.container div.blogs div.blo:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0 0 10px 2px var(--black-color); */
+  border-radius: 10px;
+}
+div.blog div.container div.blogs div.blo:hover img {
+  filter: grayscale(1);
+}
+@media (max-width: 767px) {
+  div.blog div.container div.blogs div.blo {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+div.blog div.container div.blogs div.blo div.text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  padding: 10px;
+}
+div.blog div.container div.blogs div.blo img {
+  max-width: 100%;
+}
+div.blog div.container div.blogs div.blo h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+div.blog div.container div.blogs div.blo div.icon i {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 10px 10px 10px 0;
+  color: var(--third-color);
+}
+.fa-user:before {
+  content: "\f007";
+  font-weight: 800;
+}
+.fa-folder:before {
+  content: "\f07b";
+  font-weight: 800;
+}
+.fa-comments:before {
+  content: "\f086";
+  font-weight: 800;
+}
+div.blog div.container div.blogs div.blo p {
+  color: var(--third-color);
+  margin-bottom: 10px;
+}
+div.blog div.container div.blogs div.blo a {
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--seconrdy-color);
+  font-weight: 700;
+}
+div.blog div.container div.blogs div.blo a:hover {
+  text-decoration: underline;
+  color: #e84a15;
+}
+/* end blog */
+/* start contact */
+.small {
+  font-weight: 500;
+}
+div.contact {
+  padding: 50px 10px;
+  background-color: var(--black-color);
+  color: white;
+  display: grid;
+  grid-template-columns: 25% repeat(3, 1fr);
+}
+@media (max-width: 1199px) {
+  div.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 767px) {
+  div.contact {
+    display: flex;
+    flex-direction: column;
+  }
+}
+div.contact div.info {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1199px) {
+  div.contact div.info {
+    width: 100%;
+  }
+}
+div.contact div.info p {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.2;
+}
+div.contact div.location div.icons {
+  display: flex;
+  flex-direction: column;
+}
+div.contact div.location div.icons i {
+  margin: 15px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+div.contact div.location div.icons i::before {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 700;
+}
+div.contact div.location div.media {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  div.contact div.location div.media {
+    max-width: 70%;
+  }
+}
+div.contact div.location div.media a {
+  color: white;
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: -20px;
+  margin-top: 10px;
+}
+div.contact div.location div.media a:hover {
+  color: black;
+  background-color: white;
+}
+div.contact div.location div.media a i {
+  font-size: 24px;
+  font-weight: 500;
+}
+div.contact div.links {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 25px;
+}
+div.contact div.links i {
+  margin: 6px 0;
+  font-size: 25px;
+}
+div.contact div.links i::before {
+  padding: 0 10px;
+}
+div.contact div.links i a {
+  color: white;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+}
+div.contact div.links i a:hover {
+  text-decoration: underline;
+}
+div.contact div.form form {
+  display: flex;
+  flex-direction: column;
+}
+div.contact div.form input {
+  padding: 10px;
+  border: none;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 22px;
+  transition: var(--main-transition, 0.5s);
+  -webkit-transition: var(--main-transition, 0.5s);
+  -moz-transition: var(--main-transition, 0.5s);
+  -ms-transition: var(--main-transition, 0.5s);
+  -o-transition: var(--main-transition, 0.5s);
+}
+div.contact div.form input:focus {
+  outline: none;
+}
+
+div.contact div.info,
+div.contact div.location,
+div.contact div.links,
+div.contact div.form {
+  position: relative;
+  margin: 0 10px;
+  padding: 5px;
+}
+@media (max-width: 767px) {
+  div.contact div.info,
+  div.contact div.location,
+  div.contact div.links,
+  div.contact div.form {
+    margin: 10px;
+    max-width: 90%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  div.contact div.location,
+  div.contact div.links,
+  div.contact div.form {
+    width: calc(90% / 3);
+  }
+}
+/* end contact */
+/* start footer  */
+div.footer {
+  background: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+/* end footer  */
